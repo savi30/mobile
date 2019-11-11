@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">reads</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_item_available">No item available</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="save">Save</string>
+    <string name="name">Name</string>
+    <string name="id">id</string>
+    <string name="no_pages">No.Pages</string>
+    <string name="authors">Authors</string>
+</resources>

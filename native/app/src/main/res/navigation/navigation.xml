@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.savi30.reads.ListFragment"
+        android:label="ListFragment">
+        <action
+            android:id="@+id/action_listFragment_to_details"
+            app:destination="@id/details" />
+        <argument
+            android:name="book"
+            app:argType="com.savi30.reads.data.Book"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="action"
+            app:argType="com.savi30.reads.data.Action"
+            android:defaultValue="NONE" />
+        <action
+            android:id="@+id/action_listFragment_to_addBookFragment"
+            app:destination="@id/addBookFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/details"
+        android:name="com.savi30.reads.DetailsFragment"
+        android:label="Details">
+        <argument
+            android:name="book"
+            app:argType="com.savi30.reads.data.Book" />
+        <action
+            android:id="@+id/action_details_to_listFragment"
+            app:destination="@id/listFragment"
+            app:popUpTo="@+id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addBookFragment"
+        android:name="com.savi30.reads.AddBookFragment"
+        android:label="fragment_add_book"
+        tools:layout="@layout/fragment_add_book" >
+        <action
+            android:id="@+id/action_addBookFragment_to_listFragment"
+            app:destination="@id/listFragment"
+            app:popUpTo="@+id/listFragment" />
+    </fragment>
+</navigation>
